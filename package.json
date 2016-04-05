@@ -1,0 +1,17 @@
+{
+  "name": "happifier",
+  "version": "1.0.0",
+  "description": "Training you to be happy",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godds/happifier.git"
+  },
+  "author": "Graham Odds",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
+  }
+}

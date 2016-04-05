@@ -5,6 +5,22 @@
     <title>GrumpAway</title>
   </head>
   <body>
-    
+
+    <video id="videoEl" width="400" height="300" preload="auto" loop></video>
+
+    <script>
+      var video = document.getElementById("videoEl");
+
+      navigator.getUserMedia = MediaDevices.getUserMedia || navigator.getUserMedia || navigator.webkitGetUserMedia;
+      window.URL = window.URL || window.webkitURL;
+
+      navigator.getUserMedia({video:true}, function(stream) {
+        video.src = (window.URL && window.URL.createObjectURL(stream)) || stream;
+        video.play();
+      }, function() {
+        console.error("problems getUserMedia-ing...");
+      });
+    </script>
+
   </body>
 </html>
